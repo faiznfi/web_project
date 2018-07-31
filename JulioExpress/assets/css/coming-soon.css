@@ -1,0 +1,405 @@
+html {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Merriweather';
+  font-weight: 700;
+}
+
+body {
+  height: 100%;
+  min-height: 35rem;
+  position: relative;
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  
+}
+
+.loginbutton {
+     position:absolute;
+     top:0;
+     right:0;
+
+}
+.overlay {
+  position: absolute;
+  height: 100%;
+  min-height: 35rem;
+  width: 100%;
+  background-image: url(../img/img-background.png);
+  background-repeat : no-repeat;
+  background-position : fixed;
+  background-size: 100% 100%;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .overlay {
+    min-height: 0;
+  }
+}
+
+.masthead {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 3rem;
+}
+
+.masthead .masthead-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  min-height: 35rem;
+  height: 100%;
+  background-color: rgba(0, 46, 102, 0.8);
+  transform: skewY(4deg);
+  transform-origin: bottom right;
+}
+
+.masthead .masthead-content h1 {
+  font-size: 2.5rem;
+}
+
+.masthead .masthead-content p {
+  font-size: 1.2rem;
+}
+
+.masthead .masthead-content p strong {
+  font-weight: 700;
+}
+
+.masthead .masthead-content .input-group-newsletter input {
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.masthead .masthead-content .input-group-newsletter button {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .masthead {
+    height: 100%;
+    min-height: 0;
+    width: 40.5rem;
+    padding-bottom: 0;
+  }
+  .masthead .masthead-bg {
+    min-height: 0;
+    transform: skewX(-8deg);
+    transform-origin: top right;
+  }
+  .masthead .masthead-content {
+    padding-left: 3rem;
+    padding-right: 10rem;
+  }
+  .masthead .masthead-content h1 {
+    font-size: 3.5rem;
+  }
+  .masthead .masthead-content p {
+    font-size: 1.3rem;
+  }
+}
+
+.social-icons {
+  position: absolute;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.social-icons ul {
+  margin-top: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.social-icons ul > li {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+.social-icons ul > li > a {
+  display: block;
+  color: white;
+  background-color: rgba(0, 46, 102, 0.8);
+  border-radius: 100%;
+  font-size: 2rem;
+  line-height: 4rem;
+  height: 4rem;
+  width: 4rem;
+}
+
+@media (min-width: 768px) {
+  .social-icons {
+    margin: 0;
+    position: absolute;
+    right: 2.5rem;
+    bottom: 2rem;
+    width: auto;
+  }
+  .social-icons ul {
+    margin-top: 0;
+    width: auto;
+  }
+  .social-icons ul > li {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  .social-icons ul > li:last-child {
+    margin-bottom: 0;
+  }
+  .social-icons ul > li > a {
+    transition: all 0.2s ease-in-out;
+    font-size: 2rem;
+    line-height: 4rem;
+    height: 4rem;
+    width: 4rem;
+  }
+  .social-icons ul > li > a:hover {
+    background-color: #003E66;
+  }
+}
+
+.btn-secondary {
+  background-color: #cd9557;
+  border-color: #cd9557;
+}
+
+.btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover {
+  background-color: #ba7c37 !important;
+  border-color: #ba7c37 !important;
+}
+
+.input {
+  font-weight: 300 !important;
+}
+
+.modal {
+  background-color: blue);
+  display: none;
+  overflow: auto;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  top: 0px;
+  width: 600px;
+  margin: 0 auto;
+  background-color:#7ea5e5;
+  //background-color: #fff;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.modal-animated-in {
+  animation: totop-in .3s ease;
+}
+.modal-animated-out {
+  animation: totop-out .3s ease forwards;
+}
+.modal-header {
+  background-color: #3c63a3;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  padding-left: 20px;
+}
+.modal-content .close:hover {
+  background-color: #fff;
+  color: #222;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 0 20px;
+}
+.modal-body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.modal-body ul li {
+  position: relative;
+  display: block;
+  margin-left: 20px;
+  color: #555;
+}
+.modal-body ul li::before {
+  position: absolute;
+  content: '\f00c';
+  color: #5cc560;
+  left: -20px;
+  top: 10px;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Modal Footer */
+.modal-footer {
+  background-color: #3c63a3;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  padding-left: 20px;
+}
+.modal-header h3,
+.modal-footer h3 {
+  color: #fff;
+}
+
+/* Keyframes */
+@keyframes totop-in {
+  0% {
+    top: 600px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }  
+}
+
+@keyframes totop-out {
+  0% {
+    top: 0px;
+    opacity: 1;
+  }
+  100% {
+    top: -100%;
+    opacity: 0;
+  }  
+}
+
+/**
+ * 01/28/2016
+ * This pen is years old, and watching at the code after all
+ * those years made me fall from my chair, so I:
+ * - changed all IDs to classes
+ * - converted all units to pixels and em units
+ * - changed all global elements to classes or children of
+ *   .login
+ * - cleaned the syntax to be more consistent
+ * - added a lot of spaces that I so hard tried to avoid
+ *   a few years ago
+ *   (because it's cool to not use them)
+ * - and probably something else that I can't remember anymore
+ *
+ * I sticked to the same philosophy, meaning:
+ * - the design is almost the same
+ * - only pure HTML and CSS
+ * - no frameworks, preprocessors or resets
+ */
+
+/* 'Open Sans' font from Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+.background{
+
+}
+
+.login {
+  width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+}
+
+/* Reset top and bottom margins from certain elements */
+.login-header,
+.login p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* The triangle form is achieved by a CSS hack */
+.login-triangle {
+  width: 0;
+  margin-right: auto;
+  margin-left: auto;
+  border: 12px solid transparent;
+  border-bottom-color: #28d;
+}
+
+.login-header {
+  background: #28d;
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.login-container {
+  background: #ebebeb;
+  padding: 12px;
+}
+
+/* Every row inside .login-container is defined with p tags */
+.login p {
+  padding: 12px;
+}
+
+.login input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+  background: #fff;
+  border-color: #bbb;
+  color: #555;
+}
+
+/* Text fields' focus effect */
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+  border-color: #888;
+}
+
+.login input[type="submit"] {
+  background: #28d;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login input[type="submit"]:hover {
+  background: #17c;
+}
+
+/* Buttons' focus effect */
+.login input[type="submit"]:focus {
+  border-color: #05a;
+}
